@@ -1,15 +1,19 @@
 ﻿string [] array = {"hello", ":)", "yes", "not", "1234455"};
-void Massiv (string [] arr)
-{
-    Console.Write("[");
-    for (int i= 0; i < arr.Length; i++)
-    {
-        int count = arr[i].Count();
-        if (count <= 3)
+int count = 0;
+    for (int i= 0; i < array.Length; i++)
+     if (array[i].Length <= 3)
+        {  
+            count++;
+        }
+
+string [] newarr = new string [count];
+    for(int i= 0, j = 0; i < array.Length; i++)
         {   
-            Console.Write($" \"{arr[i]}\" ");
-        }  
-    }
-    Console.Write("]");
-}
-Massiv(array);
+            if (array[i].Length <= 3)
+            {
+                newarr[j] = array[i];
+                j++;
+            }
+           
+        }
+        Console.WriteLine($"[{string.Join(", ", array)}] -> [{string.Join(", ", newarr)}]");
