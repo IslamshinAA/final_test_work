@@ -1,4 +1,4 @@
-﻿string [] array = {"hello", ":)", "yes", "not", "1234455"};
+﻿string [] array = {"hel", "21", "yes", "no", "12"};
 int count = 0;
     for (int i= 0; i < array.Length; i++)
      if (array[i].Length <= 3)
